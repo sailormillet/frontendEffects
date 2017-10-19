@@ -1,0 +1,71 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+	background:#f5f6f9!important;
+}
+.page {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    .main{
+        width: 100%;
+        overflow: hidden;
+        padding: 10px 15px;
+    	a{
+    	    font-size: 16px;
+    		color: #f79539; 
+    		// display: block;
+            // padding: 12px;
+    		text-decoration: none;
+		    overflow: hidden;
+		    text-overflow: clip;
+		    white-space: pre;
+            animation:myfirst 5s linear 2s infinite alternate;
+            /* Firefox: */
+            -moz-animation:myfirst 5s linear 2s infinite alternate;
+            /* Safari and Chrome: */
+            -webkit-animation:myfirst 5s linear 2s infinite alternate;
+            /* Opera: */
+            -o-animation:myfirst 5s linear 2s infinite alternate;
+    	}
+        @keyframes myfirst
+        {
+            0%   {position:relative; left:0px;}
+            100% {position:relative; left:-30%;}
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0%   {position:relative; left:0px;}
+            100% {position:relative; left:-30%;}
+        }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            0%   {position:relative; left:0px;}
+            100% {position:relative; left:-30%;}
+        }
+
+        @-o-keyframes myfirst /* Opera */
+        {
+            0%   {position:relative; left:0px;}
+            100% {position:relative; left:-30%;}
+        }
+
+    }
+
+}
+    marquee{
+        font-size: 16px;
+        color: #f79539;
+        display: block;
+        padding: 12px 0;
+        text-decoration: none;
+        overflow: hidden;
+        // text-overflow: clip;
+        white-space: nowrap;
+        width: 100%
+    } 
