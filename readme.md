@@ -1,102 +1,83 @@
+#frontendEffects
+>这个库作为练习用来研究写一些前端的效果,
+>涉及到的知识点会一点点详细记录,
+>主要用html5、css3、less、es6、jQuery、gulp压缩
 
-#HTML marquee 标签
->该标签不是HTML3.2的一部分，只支持MSIE3以后内核，
->如有非IE内核浏览器，可能无法看到效果，
->marquee已被html5弃用*语法
+##架构
+- ####类库框(mvc开发思想)
+   jquery、requirejs模块定义系统
 
-```
-<marquee align="left"behavior="scroll" bgcolor="#FF0000"
-direction="up" height="300" width="200"hspace="50" vspace="20" loop="-1" scrollamount="10"
-scrolldelay="100" onMouseOut="this.start()" onMouseOver="this.stop()">
-例子
-</marquee>
-```
+- ####dist文件夹是最后生产用的文件
+- ####src文件夹是开发的文件
 
-1.marquee常用两个事件:
+## 编码开发
 
-```
-onMouseOut="this.start()" ：//用来设置鼠标移出该区域时继续滚动
-onMouseOver="this.stop()"：//用来设置鼠标移入该区域时停止滚动
-```
+- ####编辑器 
+   - sublime text3
+       - 插件以及快捷键
+       
+        >插件安装：使用Package Control组件安装：按 Ctrl+` 调出console粘贴以下代码到底部命令行并回车：
+       
+       ```  
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+       ```
+       >重启Sublime Text 3。如果在Perferences->package settings中看到package control这一项，则安装成功。按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。
+       
+       ```
+       1.Sublime Terminal
+       可以让你在Sublime中直接使用终端打开你的项目文件夹，即可使用快捷键Ctrl+Shift+T呼出命令行窗口。
+       
+       2.Emmet插件
+       输入标签简写形式，然后按Tab键
+       
+       3.JsFormat插件
+       同样使用Package Control安装JsFormat插件后，Ctrl+Alt+F对JS进行格式化
+       
+       4.TrailingSpaces插件
+       TrailingSpaces这款插件能高亮显示多余的空格和Tab
+       
+       5.Tag插件
+       这是HTML/XML标签缩进、补全、排版和校验工具
+       
+       6.CssComb插件
+       在CSS文件中按快捷键Ctrl+Shift+C
+       
+       7.Autoprefixer插件
+       CSS3私有前缀自动补全插件，在输入CSS3属性后（冒号前）按Tab键，
+       
+       8.Markdown Preview
+       Ctrl+Shift+P调出命令面板，输入mdp，浏览器中预览markdown文件。 
+       
+       9.Markdown Editing
 
-2.marquee属性
 
-|属性|简介|描述|
-|-|-|-|
-|align|标签内容的对齐方式|absbottom 绝对底部对齐（与g、p等字母的最下端对齐）absmiddle 绝对中央对齐 baseline 底线对齐 bottom 底部对齐（默认） left 左对齐 | middle：中间对齐|texttop：顶线对齐|top：顶部对齐|
-|behavior|设定滚动的方式|alternate 在两端之间来回滚动 scroll 由一端滚动到另一端，会重复 slide 由一端滚动到另一端，不会重复|
-|direction|设定活动字幕的滚动方向|down 向下 left 向左 right 向右 up 向上|
-|loop|滚动的次数|loop=-1表示一直滚动下去，默认为-1|
-|scrollamount|活动字幕的滚动速度|单位pixels|
-|scrolldelay|活动字幕滚动两次之间的延迟时间|单位millisecond（毫秒）|
+       ```
+   
+- ####效率工具
 
-# css3 animation动画white-space
+   - gulp
+      - gulp用到的插件
+      
+      ```
+      const gulp = require('gulp');  //加载gulp
+      const uglify = require('gulp-uglify');  //加载js压缩
+      const minifyCss = require('gulp-minify-css');//加载css压缩
+      const jshint = require("gulp-jshint");//可以用来检查JS的代码
+      const less = require("gulp-less");//编译less
+      const concat = require("gulp-concat");//合并文件
+      const htmlminify = require('gulp-html-minify');//压缩html
+      const imagemin = require('gulp-imagemin');//压缩图片
+      ```
+      
+      
+- ####模块定义
+    - CommonJS : CommonJS规范是由NodeJS发扬光大，这标志着JavaScript模块化编程正式登上舞台
+    
+    - AMD : 即Asynchronous Module Definition   AMD 是 RequireJS 在推广过程中对模块定义的规范化的产出（ 现在用的是AMD,AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块 ）
+    
+    - CMD : CMD规范是国内发展出来的，就像AMD有个requireJS，CMD有个浏览器的实现SeaJS ( CMD推崇就近依赖，只有在用到某个模块的时候再去require )
+    
+    
+- ####版本管理
 
-1.css
-```
-    .main{
-        width: 100%;
-        overflow: hidden;
-        padding: 10px 15px;
-        a{
-            font-size: 16px;
-            color: #f79539; 
-            // display: block;
-            // padding: 12px;
-            text-decoration: none;
-            overflow: hidden;
-            text-overflow: clip;
-            white-space: pre;
-            animation:myfirst 5s linear 2s infinite alternate;
-            /* Firefox: */
-            -moz-animation:myfirst 5s linear 2s infinite alternate;
-            /* Safari and Chrome: */
-            -webkit-animation:myfirst 5s linear 2s infinite alternate;
-            /* Opera: */
-            -o-animation:myfirst 5s linear 2s infinite alternate;
-        }
-        @keyframes myfirst
-        {
-            0%   {position:relative; left:0px;}
-            100% {position:relative; left:-30%;}
-        }
-
-        @-moz-keyframes myfirst /* Firefox */
-        {
-            0%   {position:relative; left:0px;}
-            100% {position:relative; left:-30%;}
-        }
-
-        @-webkit-keyframes myfirst /* Safari and Chrome */
-        {
-            0%   {position:relative; left:0px;}
-            100% {position:relative; left:-30%;}
-        }
-
-        @-o-keyframes myfirst /* Opera */
-        {
-            0%   {position:relative; left:0px;}
-            100% {position:relative; left:-30%;}
-        }
-
-    }
-
-            
-```
-
-2.text-overflow 
-|属性|描述|
-|-|-|
-|clip|修剪文本|
-|ellipsis|显示省略符号来代表被修剪的文本|
-|clip|使用给定的字符串来代表被修剪的文本|
-
-3.white-space
-|属性|描述|
-|-|-|
-|normal|默认。空白会被浏览器忽略|
-|pre|空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签|
-|nowrap|文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止|
-|pre-wrap|保留空白符序列，但是正常地进行换行。|
-|pre-line|合并空白符序列，但是保留换行符|
-|inherit|规定应该从父元素继承 white-space 属性的值|
+   - git github
