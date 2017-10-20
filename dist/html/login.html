@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../css/login.min.css" type="text/css">
+</head>
+<body>
+
+	<div class="login-group">
+		<div class="login-form">
+			<label class="login-form_label"></label>
+			<div class="login-form_select">
+				   <select name="country" id="country">
+					  <option value="86" selected="selected">+86 中国</option>
+					  <option value="244">+244 安哥拉</option> 
+					  <option value="93">+93 阿富汗</option>
+					  <option value="355">+355 阿尔巴尼亚</option> 
+					  <option value="213">+213 阿尔及利亚</option> 
+					  <option value="376">+376 安道尔共和国</option>
+					  <option value="1264">+1264 安圭拉岛</option>
+					  <option value="1268">+1268 安提瓜和巴布达</option>
+					  <option value="54">+54 阿根廷</option>
+					  <option value="247">+247 阿森松</option>  
+				  </select>
+			</div>
+
+		</div>
+		<div class="login-form">
+			<label class="login-form_label"></label>
+			<input type="number" id="phone" name="phone" placeholder="请输入手机号" >
+			<a href="javascript:;" class="login-in-sms">获取验证码</a>
+		</div>
+		<div class="login-form">
+			<label class="login-form_label"></label>
+			<input type="number" name="code" id="code" placeholder="填写手机验证码">
+		</div>
+		<button>登录</button>
+	</div>
+
+	
+
+
+
+  <script type="text/javascript" src="../js/login.min.js"></script>
+</body>
+</html>

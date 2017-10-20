@@ -1,14 +1,22 @@
 #frontendEffects
 >这个库作为练习用来研究写一些前端的效果,
 >涉及到的知识点会一点点详细记录,
->主要用html5、css3、less、es6、jQuery、gulp压缩
+>主要用html5、css3、less、es6、jQuery、bootstrap、gulp压缩、
 
 ##架构
 - ####类库框(mvc开发思想)
    jquery、requirejs模块定义系统
 
 - ####dist文件夹是最后生产用的文件
+     - html    
+     - 压缩后的css
+     - 压缩后的js 
+     
+
 - ####src文件夹是开发的文件
+     - common 
+         - 第三方库文件
+   
 
 ## 编码开发
 
@@ -17,7 +25,7 @@
        - 插件以及快捷键
        
         >插件安装：使用Package Control组件安装：
-        >按 Ctrl+` 调出console粘贴以下代码到底部命令行并回车：
+        > 按 Ctrl+` 调出console粘贴以下代码到底部命令行并回车：
         
        
        ```    
