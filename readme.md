@@ -64,6 +64,7 @@
    - gulp
       - gulp用到的插件
       
+      
       ```
       const gulp = require('gulp');  //加载gulp
       const uglify = require('gulp-uglify');  //加载js压缩
