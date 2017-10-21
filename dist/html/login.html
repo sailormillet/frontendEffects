@@ -32,20 +32,39 @@
 		</div>
 		<div class="login-form">
 			<label class="login-form_label"></label>
-			<input type="number" id="phone" name="phone" placeholder="请输入手机号" >
+			<input type="number" class="h5ui-form-input" id="phone" name="phone" placeholder="请输入手机号" >
 			<a href="javascript:;" class="login-in-sms">获取验证码</a>
 		</div>
 		<div class="login-form">
 			<label class="login-form_label"></label>
-			<input type="number" name="code" id="code" placeholder="填写手机验证码">
+			<input type="number" name="code" class="h5ui-form-input" id="code" placeholder="填写手机验证码">
 		</div>
-		<button>登录</button>
+		<!-- <button class="login-btn">登录</button> -->
 	</div>
-
+	<div class="login-modal" id="img-code" tabindex="-1" aria-hidden="true" data-backdrop="static" style="    display: none;">
+		<div class="modal-dialog middle" style="z-index:10000;">
+			<div class="modal-content clearfix">
+				<h3>输入图片验证</h3>
+				<div class="base-ppt"><span>图片验证失败</span></div>
+				<div class="base-close"><a href="javascript:;"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a></div>
+				<a href="javascript:;" class="base-img">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAoCAYAAAAIeF9DAAACK0lEQVR4nOxarU4EMRDeJYj1PALB4sByEomGZA2Wx8EiQSORhwWHJTwCft2STShplnY733baTrv9ksuVMJ3p9bv5vT1shOPy9nxU65eHtzbtacLjIPUBlqCTYfq7RIglxHb5pZMilpCtohIiDGIJsSXw0hO7WEIaw+WXTkbFL86ujsUUCk4PoVQ1PpWPvte2DglFhhRSFglRl7J0ORQZyl7bGtVFXSu8P3+16v1kd+T8nBSdPnDG5MmgK3ZTZCh7bWuKDsSmSa9Oxuf+u0X1R8tvnCELvbgYHqJDvIdQ5kjUWRM6kwo9w3J5IOr1PlECQi4egurVcxX6f195L3AQIoUIxEaqMwevstCKyadqo+pucm4yS/EQJKwUG7JSEbG7OR3Va63+4kJWqlA1kdB13T+9sfH0ej+qF7IvaGOYonTkaOJ8S3QTCdcXd6TP5ZxlTQZcTZFJJlUdPwzD37taT3qVbooNRHYub/MIqqc4H3IwhRJq10q9ZN2GLyn7x49Wzx25VVPkWZFr3jRfN+BlhO50kTDkE7L6vrfKUcMWC9Ym5ZhJN1aVpSd0NLGz/GI4J0NCE2iC/m0PaXPuCVE9QyEHD9FtZjvLoiIHIhD7IhtDKqSHqpzAQohP3c5hH0VOA9HVQPoVCZAasli+ochhQnkF2itx6+YCmzJ1uJiH120j8mjDyqlvM1gz2uHUXVEoRD/bu0VUQoShEiIMlRBhqIQIQyVEGH4CAAD//yGnYUpUPf2XAAAAAElFTkSuQmCC">
+				</a>
+				<p>看不清？点击刷新</p>
+				<div class="base-btn">
+					<a href="javascript:;" class="active"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+				</div>
+				<input type="text" name="img-code" maxlength="4">
+			</div>
+		</div>
+	</div>
 	
 
 
-
-  <script type="text/javascript" src="../js/login.min.js"></script>
+  <!-- <script type="text/javascript" src="../js/login.min.js"></script> -->
+  <script type="text/javascript" data-main='../js/login.min.js' src="../js/require.min.js"></script>
 </body>
 </html>

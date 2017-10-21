@@ -7,13 +7,13 @@
 - ####类库框(mvc开发思想)
    jquery、requirejs模块定义系统
 
-- ####dist文件夹是最后生产用的文件
+- ####dist  为生产环境目录，包含CSS、JavaScript、图片素材 和 用于演示的Html文件。
      - html    
      - 压缩后的css
      - 压缩后的js 
      
 
-- ####src文件夹是开发的文件
+- ####src 存放 Less、JavaScrip文件源码 和 第三方库文件。
      - common 
          - 第三方库文件
    
@@ -82,6 +82,25 @@
       const concat = require("gulp-concat");//合并文件
       const htmlminify = require('gulp-html-minify');//压缩html
       const imagemin = require('gulp-imagemin');//压缩图片
+      const amdOptimize = require("amd-optimize");//关键文件 与gulp与require集成 
+      const babel = require('gulp-babel');//Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
+const browserify = require('browserify');//让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码
+
+      安装 gulp-babel
+      //Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
+      npm install --save-dev gulp-babel babel-preset-es2015
+      其中babel -preset-es2015 是ES2015转码规则，如果代码中含有es7的内容，可以继续安装ES7不同阶段语法提案的转码规则
+      # ES2015转码规则
+      $ npm install --save-dev babel-preset-es2015
+
+      # react转码规则
+      $ npm install --save-dev babel-preset-react
+
+      browserify
+      让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码
+
+      vinyl-source-stream
+      将Browserify的bundle()的输出转换为Gulp可用的vinyl（一种虚拟文件格式）流
       ```
       
       
