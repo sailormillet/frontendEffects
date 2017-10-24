@@ -1,0 +1,249 @@
+@import "../../common/less/reset";
+
+body{
+	background: #fff;
+   	-webkit-font-smoothing: antialiased;
+   	.login-group{
+   		    height: 100%;
+		    padding: 0 30px;
+		    background: #fff;
+		    max-width: 640px;
+		    margin: 200px auto 0;
+   	}
+   	@media screen and (min-width: 900px){
+   		    .login-group{
+				    width: 440px;
+				    height: 540px;
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    margin: -270px 0 0 -220px;
+		    }
+   	}
+   	.login-form{
+   		position: relative;
+   		height: 50px;
+   		.login-form_label{
+   			padding: 0;
+			width: 50px;
+			height: 50px;
+   		}
+   		select{
+   			height: 50px;
+		    font-size: 16px;
+		    line-height: 50px;
+   		}
+   	}
+   	.login-form:after {
+   		content: '';
+	    position: absolute;
+	    width: 100%;
+	    height: 1px;
+	    top: 50px;
+	    left: 0;
+	    background: #e5e5e5;
+	    z-index: 1;
+	    -webkit-transform: scale(1, 0.5);
+	    transform: scale(1, 0.5);
+	}
+	.login-form_select{
+		position: relative;
+		width: 100%;
+    	padding: 0 0 0 50px;
+	}
+	.login-form_select:after{
+		content: '';
+	   	top: 15px;
+		right: 17px;
+	    position: absolute;
+	    display: inline-block;
+		font-size: 0;
+	    border-top: 2px solid rgba(0,0,0,.2);
+	    border-left: 2px solid rgba(0,0,0,.2);
+	    width: 8px;
+	    height: 8px;
+	    background-color: transparent;
+	    top: 21px;
+	    border-left: 2px solid rgba(0, 0, 0, 0.2);
+	    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	    border-right: none;
+	    border-top: none;
+	    transform: rotate(-45deg);
+	    -webkit-transform: rotate(-45deg);
+	}
+	select{
+		    width: 100%;
+		    border: 0;
+		    background: #fff;
+		    /*很关键：将默认的select选择框样式清除*/
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			background: #fff;
+			/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+			select::-ms-expand { display: none; }
+	}
+
+	.h5ui-form-input{
+		    padding: 16px 15px 12px 50px;
+		    border: 0px;
+		    font-size: 16px;
+		    width: 100%;
+		    box-shadow: none;
+    		-webkit-box-shadow: none;
+	}
+	.login-in-sms{
+		    position: absolute;
+		    top: 1px;
+		    right: 0;
+		    height: 49px;
+		    line-height: 49px;
+		    padding: 2px 5px 0;
+		    font-size: 14px;
+		    color: #43ac43;
+		    background: white;
+	}
+	.login-btn{
+		    display: inline-block;
+		    padding: 10px 16px;
+		    font-size: 17px;
+		    margin-bottom: 0;
+		    font-weight: 400;
+		    border: none;
+		    border-radius: 5px;
+		    -webkit-border-radius: 5px;
+		    min-width: 140px;
+		    cursor: pointer;
+		    width: 100%;
+		    margin: 87px 0;
+		    background: #57af4b;
+		    color: #fff;
+	}
+	.login-btn, .h5ui-form-input, .login-form_select>select {
+    -webkit-appearance: none;
+}
+.login-modal{
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 1;
+	    overflow: hidden;
+	    -webkit-overflow-scrolling: touch;
+	    outline: 0;
+	    .modal-backdrop.in{
+			    height: 100%;
+			    position: fixed;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    z-index: 2;
+			    background-color: #000;
+			    opacity: .4;
+	    }
+	    .modal-dialog {
+		    position: fixed;
+		    margin: 0;
+		    top: 8%;
+		    -webkit-animation: bounce-in .3s 0s ease both;
+		    animation: bounce-in .3s 0s ease both;
+		    background: #fff;
+         }
+}
+
+#img-code {
+	.modal-dialog {
+    width: 276px;
+    padding: 0;
+    top: 18%;
+    left: 50%;
+    margin-left: -138px;
+     h3 {
+	    margin: 25px 0 23px;
+	    font-size: 15px;
+	    color: #222;
+	    text-align: center;
+		}
+	.base-ppt {
+	    position: absolute;
+	    top: 47px;
+	    width: 100%;
+	    font-size: 12px;
+	    color: red;
+	    text-align: center;
+	    display: none;
+	}
+	.base-img {
+	    display: block;
+	    width: 220px;
+	    height: 50px!important;
+	    margin: 0 auto;
+	    text-align: center;
+	    background: #D8D8D8;
+	    img{
+	    	    margin-top: 5px;
+	    height: 50px!important;
+	    }
+
+    }
+    .base-btn {
+	    width: 220px;
+	    height: 50px;
+	    margin: 10px auto 20px;
+	    overflow: hidden;
+	    a{
+	    	    float: left;
+			    width: 45px;
+			    height: 45px;
+			    line-height: 45px;
+			    margin-left: 13px;
+			    border: 1px solid #ccc;
+			    border-radius: 4px;
+			    text-align: center;
+			    font-size: 22px;
+	    }
+	    a:first-child {
+		    margin-left: 0px;
+		}
+		 .active {
+		    border: 1px solid #43ac43;
+		}
+
+	}
+	.base-close{
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    width: 49px;
+		    height: 49px;
+		    padding: 15px;
+		    span{
+		    	font-size: 20px
+		    }
+	}
+	p {
+		    display: block;
+		    width: 220px;
+		    margin: 5px auto 0;
+		    font-size: 12px;
+		    color: #ccc;
+		    text-align: right;
+		}
+	}
+	input {
+	    position: absolute;
+	    top: -1080px;
+	    left: 65px;
+	    z-index: -1;
+	}
+}
+}
+
+
+
+
+
+
+

@@ -33,6 +33,7 @@ require([ 'bootstrap'], function(bootstrap) {
      
     if(arr.length == 4) {
   		$('input[name="img-code"]').val('');
+        $('.base-btn').html('<a href="javascript:; " class="active"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a>');
        //发送接口
      	$('#img-code').modal('hide');
 
