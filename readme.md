@@ -66,7 +66,8 @@
 
 
        ```
-   
+    - sublime text3
+       - 插件以及快捷键
 - ####效率工具
 
    - gulp
@@ -117,3 +118,7 @@ const browserify = require('browserify');//让你使用类似于 node 的 requir
 - ####版本管理
 
    - git github
+
+-配置命令行HTTP服务器 - http-server (nodeJs)
+ npm install http-server 
+sudo node http-server路经 静态资源路经
