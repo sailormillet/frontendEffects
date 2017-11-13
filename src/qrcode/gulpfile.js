@@ -6,19 +6,6 @@ const juicerjs = require('gulp-juicer-js');//juicer
 const less = require("gulp-less");
 const concat = require("gulp-concat");//合并文件
 const amdOptimize = require("amd-optimize");  //关键文件 与gulp与require集成 
-// const babel = require('gulp-babel');//Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
-// const es2015 = require('babel-preset-es2015');
-// const webpack = require('gulp-webpack');
-// const browserify = require('browserify');//让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码browserify: 主要用于js代码模块整合编译
-
-// const babelify    = require('babelify');//用于转化的核心库
-// const source      = require('vinyl-source-stream');
-// const buffer      = require('vinyl-buffer');
-// const sourcemaps  = require('gulp-sourcemaps');//生成sourcemap文件
-// const livereload  = require('gulp-livereload'); //gulp-livereload拯救F5！当监听文件发生变化时，浏览器自动刷新页面
-//babel-preset-es2015:用于预设转化语法形式（在最新版本的node环境需要配置这个库，否则不生效，亲测！）
-//
-// var requirejs = require('gulp-requirejs');
 
 
 
