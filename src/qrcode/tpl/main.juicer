@@ -1,0 +1,4 @@
+<input id="text" type="text" value="http://www.baidu.com" />
+<button>提交</button>
+<br />
+<div id="qrcode"></div>

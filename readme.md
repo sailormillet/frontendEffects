@@ -1,7 +1,7 @@
 #frontendEffects
 >这个库作为练习用来研究写一些前端的效果,
 >涉及到的知识点会一点点详细记录,
->主要用html5、css3、less、es6、jQuery、bootstrap、gulp压缩、
+>主要用html5、css3、less、es6、jQuery、bootstrap、gulp压缩、juicer模版渲染
 
 ##架构
 - ####类库框(mvc开发思想)
@@ -68,6 +68,8 @@
        ```
     - sublime text3
        - 插件以及快捷键
+
+       
 - ####效率工具
 
    - gulp

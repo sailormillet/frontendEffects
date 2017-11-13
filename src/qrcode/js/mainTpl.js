@@ -1,0 +1,6 @@
+(function() {
+  var template = juicer.template, templates = juicer.templates = juicer.templates || {};
+templates['main.juicer'] = function(_, _method) {var __escapehtml = {escapehash: {'<': '&lt;','>': '&gt;','&': '&amp;','"': '&quot;',"'": '&#x27;','/': '&#x2f;'},escapereplace: function(k) {return __escapehtml.escapehash[k];},escaping: function(str) {return typeof(str) !== 'string' ? str : str.replace(/[&<>"]/igm, this.escapereplace);},detection: function(data) {return typeof(data) === 'undefined' ? '' : data;}};var __throw = function(error) {if(typeof(console) !== 'undefined') {if(console.warn) {console.warn(error);return;}if(console.log) {console.log(error);return;}}throw(error);};_method = _method || juicer.options._method;_method.__escapehtml = __escapehtml;_method.__throw = __throw;
+'use strict';var _=_||{};var _out='';_out+=''; try { _out+=''; var input=_.input;var www=_.www;var button=_.button;var br=_.br;var div=_.div; _out+='<input id="text" type="text" value="http://www.baidu.com" /> <button>提交</button> <br /> <div id="qrcode"></div> '; } catch(e) {_method.__throw("Juicer Render Exception: "+e.message);} _out+='';return _out;
+};
+})();
