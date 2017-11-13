@@ -112,7 +112,7 @@ const browserify = require('browserify');//让你使用类似于 node 的 requir
     
     - AMD : 即Asynchronous Module Definition   AMD 是 RequireJS 在推广过程中对模块定义的规范化的产出（ AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块 ）
     
-    - CMD : CMD规范是国内发展出来的，就像AMD有个requireJS，CMD有个浏览器的实现SeaJS ( CMD推崇就近依赖，只有在用到某个模块的时候再去require 
+    - CMD : CMD规范是国内发展出来的，就像AMD有个requireJS，CMD有个浏览器的实现SeaJS ( CMD推崇就近依赖，只有在用到某个模块的时候再去require ）
     
     - UMD: 通用模块规范,既然CommonJs和AMD风格一样流行，似乎缺少一个统一的规范。所以人们产生了这样的需求，希望有支持两种风格的“通用”模式，于是通用模块规范（UMD）诞生了。
     
