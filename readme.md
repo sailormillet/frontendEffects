@@ -1,5 +1,5 @@
 #frontendEffects
->这个库作为练习用来研究写一些前端的效果,
+>这个库作为练习用来研究写一些前端的效果,主要采用AMD模块化开发
 >涉及到的知识点会一点点详细记录,
 >主要用html5、css3、less、es6、jQuery、bootstrap、gulp压缩、juicer模版渲染
 
