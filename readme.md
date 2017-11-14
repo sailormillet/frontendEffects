@@ -1,30 +1,30 @@
-#frontendEffects
+# frontendEffects
 >这个库作为练习用来研究写一些前端的效果,主要采用AMD模块化开发
 >涉及到的知识点会一点点详细记录,
 >主要用html5、css3、less、es6、jQuery、bootstrap、gulp压缩、juicer模版渲染
 
-##架构
-- ####类库框(mvc开发思想)
+## 架构
+- #### 类库框(mvc开发思想)
    jquery、requirejs模块定义系统
 
-- ####dist  为生产环境目录，包含CSS、JavaScript、图片素材 和 用于演示的Html文件。
+- #### dist  为生产环境目录，包含CSS、JavaScript、图片素材 和 用于演示的Html文件。
      - html    
      - 压缩后的css
      - 压缩后的js 
      
 
-- ####src 存放 Less、JavaScrip文件源码 和 第三方库文件。
+- #### src 存放 Less、JavaScrip文件源码 和 第三方库文件。
      - common 
          - 第三方库文件
    
 
 ## 编码开发
 
-- ####编辑器 
+- #### 编辑器 
    - sublime text3
        - 插件以及快捷键
        
-        >插件安装：使用Package Control组件安装：
+        > 插件安装：使用Package Control组件安装：
         > 按 Ctrl+` 调出console粘贴以下代码到底部命令行并回车：
         
        
@@ -35,7 +35,7 @@
        ```
       
 
-       >重启Sublime Text 3。如果在Perferences->package settings中看到package control这一项，则安装成功。按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。
+       > 重启Sublime Text 3。如果在Perferences->package settings中看到package control这一项，则安装成功。按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。
        
        ```
        1.Sublime Terminal
@@ -70,7 +70,7 @@
        - 插件以及快捷键
 
        
-- ####效率工具
+- #### 效率工具
 
    - gulp
       - gulp用到的插件
@@ -87,7 +87,7 @@
       const imagemin = require('gulp-imagemin');//压缩图片
       const amdOptimize = require("amd-optimize");//关键文件 与gulp与require集成 
       const babel = require('gulp-babel');//Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
-const browserify = require('browserify');//让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码
+      const browserify = require('browserify');//让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码
 
       安装 gulp-babel
       //Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。
@@ -107,7 +107,7 @@ const browserify = require('browserify');//让你使用类似于 node 的 requir
       ```
       
       
-- ####模块定义
+- #### 模块定义
     - CommonJS : CommonJS规范是由NodeJS发扬光大，这标志着JavaScript模块化编程正式登上舞台
     
     - AMD : 即Asynchronous Module Definition   AMD 是 RequireJS 在推广过程中对模块定义的规范化的产出（ AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块 ）
@@ -117,7 +117,7 @@ const browserify = require('browserify');//让你使用类似于 node 的 requir
     - UMD: 通用模块规范,既然CommonJs和AMD风格一样流行，似乎缺少一个统一的规范。所以人们产生了这样的需求，希望有支持两种风格的“通用”模式，于是通用模块规范（UMD）诞生了。
     
     
-- ####版本管理
+- #### 版本管理
 
    - git github
 
